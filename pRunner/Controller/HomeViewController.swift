@@ -197,7 +197,7 @@ extension HomeViewController {
 
 extension HomeViewController: CLLocationManagerDelegate,MKMapViewDelegate  {
     private func setupMap() {
-        self.locationManager.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization()
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapView.showsUserLocation = true
@@ -228,18 +228,8 @@ extension HomeViewController: CLLocationManagerDelegate,MKMapViewDelegate  {
 
         mapView.mapType = MKMapType.standard
 
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
         let region = MKCoordinateRegion(center: locValue, span: span)
-        mapView.setRegion(region, animated: true)
-        
-//        let testLocValue = CLLocationCoordinate2D(latitude: 38, longitude: -122.408228)
-//
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = testLocValue
-//        annotation.title = "Javed Multani"
-//        annotation.subtitle = "current location"
-//        mapView.addAnnotation(annotation)
-
-        //centerMap(locValue)
+        mapView.setRegion(region, animated: false)
     }
 }

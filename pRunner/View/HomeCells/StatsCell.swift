@@ -79,7 +79,7 @@ class StatCell: UICollectionViewCell {
     }
     
     func setupView() {
-        layer.borderWidth = 1.0
+        layer.borderWidth = 3.0
         layer.borderColor = UIColor.rgb(red: 108, green: 108, blue: 108).cgColor
         layer.cornerRadius = 10
 //        clipsToBounds = true
