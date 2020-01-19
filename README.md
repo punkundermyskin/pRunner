@@ -1,6 +1,6 @@
 pRunner
 ==========
-This app demonstates basic use and implementation of tab bar controller, navigation controller, scoll view, table view
+Fitness tracking iOS app. The main idea of this app is to implement great interactivity between runners.
 
 ## Screenshots
 ![pRunner](./pRunner.gif)
